@@ -19,7 +19,7 @@ const PokemonsPage = async () => {
           height={30}
           className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
         />
-        <h1 className="text-2xl md:text-5xl">Lista de Pokemons</h1>
+        <h1 className="text-xl md:text-5xl">Lista de Pokemons</h1>
         <Image
           src="/pokeball.webp"
           alt="Pokeball"
