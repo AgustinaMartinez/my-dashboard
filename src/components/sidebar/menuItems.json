@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/dashboard/main",
+    "icon": "IoBrowsersOutline",
+    "title": "Dashboard",
+    "subtitle": "Visualización"
+  },
+  {
+    "path": "/dashboard/counter",
+    "icon": "IoCalculator",
+    "title": "Counter",
+    "subtitle": "Contador client side"
+  },
+  {
+    "path": "/dashboard/pokemons",
+    "icon": "IoFootball",
+    "title": "Pokemons",
+    "subtitle": "Generación estática"
+  },
+  {
+    "path": "/dashboard/favorites",
+    "icon": "IoHeart",
+    "title": "Favoritos",
+    "subtitle": "Global state"
+  }
+]

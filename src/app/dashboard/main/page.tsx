@@ -3,7 +3,7 @@ import { WidgetsGrid } from "@/components";
 const MainPage = () => {
   return (
     <div className="p-4">
-      <h1 className="text-5xl">Página principal</h1>
+      <h1 className="text-2xl md:text-5xl">Página principal</h1>
       <WidgetsGrid />
     </div>
   );
