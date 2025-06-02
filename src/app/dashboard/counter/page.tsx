@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 const CounterPage = () => {
   return (
-    <div className="flex flex-col p-4 w-full h-full">
+    <div className="flex flex-col p-4 w-full h-full gap-4">
       <h1 className="text-2xl md:text-5xl">Contador</h1>
       <div className="flex flex-col items-center justify-center">
         <span>Productos en el carrito</span>

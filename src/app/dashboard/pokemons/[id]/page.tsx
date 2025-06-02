@@ -37,7 +37,7 @@ const PokemonPage = async ({ params }: Props) => {
 
   return (
     <div className="p-4 flex mt-5 flex-col items-center text-gray-50">
-      <div className="relative flex flex-col items-center rounded-[20px] w-[700px] mx-auto bg-gray-900 bg-clip-border  shadow-lg  p-3">
+      <div className="relative flex flex-col items-center rounded-[20px] md:w-[500px] mx-auto bg-gray-900 bg-clip-border shadow-lg p-3">
         <div className="mt-2 mb-8 w-full">
           <h1 className="px-2 text-xl font-bold text-gray-100 capitalize">
             #{pokemon.id} {pokemon.name}
