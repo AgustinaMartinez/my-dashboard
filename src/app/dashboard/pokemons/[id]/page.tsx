@@ -36,10 +36,10 @@ const PokemonPage = async ({ params }: Props) => {
   const pokemon = await getPokemon(id);
 
   return (
-    <div className="p-4 flex mt-5 flex-col items-center text-slate-800">
-      <div className="relative flex flex-col items-center rounded-[20px] w-[700px] mx-auto bg-white bg-clip-border  shadow-lg  p-3">
+    <div className="p-4 flex mt-5 flex-col items-center text-gray-50">
+      <div className="relative flex flex-col items-center rounded-[20px] w-[700px] mx-auto bg-gray-900 bg-clip-border  shadow-lg  p-3">
         <div className="mt-2 mb-8 w-full">
-          <h1 className="px-2 text-xl font-bold text-slate-700 capitalize">
+          <h1 className="px-2 text-xl font-bold text-gray-100 capitalize">
             #{pokemon.id} {pokemon.name}
           </h1>
           <div className="flex flex-col justify-center items-center">
@@ -61,8 +61,8 @@ const PokemonPage = async ({ params }: Props) => {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 px-2 w-full">
-          <div className="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4  drop-shadow-lg ">
-            <p className="text-sm text-gray-600">Types</p>
+          <div className="flex flex-col items-start justify-center rounded-2xl bg-gray-800 bg-clip-border px-3 py-4  drop-shadow-lg ">
+            <p className="text-sm text-gray-400">Types</p>
             <div className="text-base font-medium text-navy-700 flex">
               {pokemon.types.map((type) => (
                 <p key={type.slot} className="mr-2 capitalize">
@@ -72,15 +72,15 @@ const PokemonPage = async ({ params }: Props) => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4  drop-shadow-lg ">
-            <p className="text-sm text-gray-600">Peso</p>
+          <div className="flex flex-col items-start justify-center rounded-2xl bg-gray-800 bg-clip-border px-3 py-4  drop-shadow-lg ">
+            <p className="text-sm text-gray-400">Peso</p>
             <span className="text-base font-medium text-navy-700 flex">
               {pokemon.weight}
             </span>
           </div>
 
-          <div className="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4  drop-shadow-lg">
-            <p className="text-sm text-gray-600">Regular Sprites</p>
+          <div className="flex flex-col justify-center rounded-2xl bg-gray-800 bg-clip-border px-3 py-4  drop-shadow-lg">
+            <p className="text-sm text-gray-400">Regular Sprites</p>
             <div className="flex justify-center">
               <Image
                 src={pokemon.sprites.front_default}
@@ -98,8 +98,8 @@ const PokemonPage = async ({ params }: Props) => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4  drop-shadow-lg">
-            <p className="text-sm text-gray-600">Shiny Sprites</p>
+          <div className="flex flex-col justify-center rounded-2xl bg-gray-800 bg-clip-border px-3 py-4  drop-shadow-lg">
+            <p className="text-sm text-gray-400">Shiny Sprites</p>
             <div className="flex justify-center">
               <Image
                 src={pokemon.sprites.front_shiny}

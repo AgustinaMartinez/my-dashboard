@@ -1,5 +1,6 @@
 import { getPokemons } from "@/services/pokemons";
 import { PokemonsGrid } from "@/components/pokemon";
+import Image from "next/image";
 
 export const metadata = {
   title: "Pokemons",
@@ -10,7 +11,11 @@ const PokemonsPage = async () => {
   const pokemons = await getPokemons(151);
   return (
     <div className="p-4 flex flex-col items-center justify-center w-full h-full gap-4">
-      <h1 className="text-5xl">Lista de Pokemons</h1>
+      <div className="flex gap-4">
+        <Image src="/pokeball.webp" alt="Pokeball" width={50} height={30} />
+        <h1 className="text-5xl">Lista de Pokemons</h1>
+        <Image src="/pokeball.webp" alt="Pokeball" width={50} height={30} />
+      </div>
       <PokemonsGrid pokemons={pokemons} />
     </div>
   );

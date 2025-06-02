@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IoMdArrowDropright } from "react-icons/io";
 
 interface SimpleWidgetProps {
   title: string;
@@ -16,7 +17,7 @@ export const SimpleWidget = ({
   href,
 }: SimpleWidgetProps) => {
   return (
-    <div className="bg-white shadow-xl p-3 sm:min-w-[25%] min-w-full  rounded-2xl border-1 border-gray-50 mx-2">
+    <div className="bg-gray-900 shadow-xl p-3 sm:min-w-[25%] min-w-full rounded-2xl mx-2">
       <div className="flex flex-col">
         {label && (
           <div>
@@ -33,9 +34,13 @@ export const SimpleWidget = ({
           </div>
         </div>
         {href && (
-          <div className="w-full place-items-end text-right border-t-2 border-gray-100 mt-2">
-            <Link href={href} className="text-indigo-600 text-xs font-medium">
-              Más
+          <div className="w-full place-items-end text-right border-t-2 border-gray-500 mt-2">
+            <Link
+              href={href}
+              className="text-pink-500 mt-2 text-xs font-medium flex items-center"
+            >
+              <span>Volver al contador</span>
+              <IoMdArrowDropright size={20} />
             </Link>
           </div>
         )}

@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "@/store";
 import { toggleFavorite } from "@/store/pokemon/pokemonSlice";
 import Image from "next/image";
 import Link from "next/link";
-import { IoHeart, IoHeartOutline } from "react-icons/io5";
+import { IoFlameOutline, IoHeart, IoHeartOutline } from "react-icons/io5";
 
 interface PokemonCardProps {
   pokemon: Pokemon;
@@ -19,15 +19,15 @@ export const PokemonCard = ({ pokemon }: PokemonCardProps) => {
 
   return (
     <div className="mx-auto right-0 mt-2 w-60">
-      <div className="bg-white rounded overflow-hidden shadow-lg">
-        <div className="flex flex-col items-center p-6 bg-gray-800">
+      <div className="bg-gray-700 rounded overflow-hidden shadow-lg">
+        <div className="flex flex-col items-center p-6 bg-gray-900">
           <Image
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
             alt={`Pokemon ${name}`}
             width={50}
             height={50}
             priority={false}
-            className="w-auto h-40"
+            className="w-auto h-40 hover:scale-110 transition-transform duration-300"
           />
           <p className="pt-2 text-lg font-semibold text-gray-50 capitalize">
             {name}
@@ -35,25 +35,30 @@ export const PokemonCard = ({ pokemon }: PokemonCardProps) => {
           <div className="mt-5">
             <Link
               href={`/dashboard/pokemons/${name}`}
-              className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100"
+              className="border rounded-full py-2 px-4 text-xs font-semibold text-pink-500 flex items-center gap-2 hover:text-gray-50 hover:border-gray-50 hover:bg-gray-800 duration-300"
             >
-              Leer más...
+              <IoFlameOutline size={20} className="text-pink-500" />
+              <span>Leer características</span>
             </Link>
           </div>
         </div>
         <div className="">
           <div
-            className="px-4 py-2 hover:bg-gray-100 flex items-center cursor-pointer"
+            className="px-4 py-2 hover:bg-gray-600 flex items-center cursor-pointer"
             onClick={onToggle}
           >
             <div className="text-red-600">
-              {isFavorite ? <IoHeart /> : <IoHeartOutline />}
+              {isFavorite ? (
+                <IoHeart className="text-pink-500" />
+              ) : (
+                <IoHeartOutline className="text-pink-500" />
+              )}
             </div>
             <div className="pl-3">
-              <p className="text-sm font-medium text-gray-800 leading-none">
+              <p className="text-sm font-medium text-gray-400 leading-none">
                 {isFavorite ? "Es favorito" : "No es favorito"}
               </p>
-              <p className="text-xs text-gray-500">Click para cambiar</p>
+              <p className="text-xs text-gray-50">Click para cambiar</p>
             </div>
           </div>
         </div>

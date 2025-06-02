@@ -39,20 +39,20 @@ export const Sidebar = () => {
   return (
     <div
       id="menu"
-      className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0"
+      className="bg-gray-950 min-h-screen z-10 text-pink-500 w-64 left-0"
       style={{ width: "400px" }}
     >
       <div id="logo" className="my-4 px-6">
         <h1 className="flex items-center gap-2 text-lg md:text-2xl font-bold text-white">
           <span>Dashboard</span>
-          <span className="text-blue-500">
+          <span className="text-pink-500">
             <IoLogoReact />
           </span>
         </h1>
-        <p className="text-slate-500 text-sm">Curso de Next.js 13+</p>
+        <p className="text-slate-400 text-sm">Curso de Next.js 13+</p>
       </div>
       <div id="profile" className="px-6 py-10">
-        <p className="text-slate-500">Bienvenida,</p>
+        <p className="text-slate-400">Bienvenida,</p>
         <a href="#" className="inline-flex space-x-2 items-center">
           <span>
             <Image
